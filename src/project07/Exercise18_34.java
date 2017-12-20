@@ -228,6 +228,7 @@ public class Exercise18_34 extends JApplet {//继承面板类
         result[0][1] = result[1][1] = result[2][1] = result[3][1] = j;
         int k = isConsecutiveFour(column);
         
+               ///福娃深度发生
         result[0][0] = k; result[1][0] = k + 1;
         result[2][0] = k + 2; result[3][0] = k + 3;
    
