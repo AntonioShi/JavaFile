@@ -2,10 +2,7 @@ package experiment03;
 
 import java.util.*;
 
-/**
- * 逾期检查类
- * @author Niracler
- */
+
 class OverdueChecker {
 
 	/** 日期输入的分隔符标记 */
@@ -78,35 +75,7 @@ class OverdueChecker {
 		System.out.println("\n\nThank you for using Library Overdue Checker");
 	}
 
-	// -------------------------------------------------
-	// Private Methods:
-	//
-	// LibraryBook createBook(String, double, double, GregorianCalendar)
-	//
-	// void display(String )
-	// boolean isContinue( )
-	// void inputBooks( )
-	//
-	// GregorianCalendar readDate(String )
-	// double readDouble(String )
-	// String readString(String )
-	//
-	// ------------------------------------------------
 
-	/**
-	 * Assigns the specified parameter to a newly created book
-	 *
-	 * @param title
-	 *            the title of the book
-	 * @param chargePerDay
-	 *            overdue charge for a single day
-	 * @param maxCharge
-	 *            maximum charge for a book
-	 * @param dueDate
-	 *            due date of the book
-	 *
-	 * @return created and initialized book
-	 */
 	private LibraryBook createBook(String title, double chargePerDay, double maxCharge, GregorianCalendar dueDate) {
 		if (dueDate == null) {
 			dueDate = new GregorianCalendar(); // set today as due date

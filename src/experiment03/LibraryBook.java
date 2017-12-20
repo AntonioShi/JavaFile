@@ -8,7 +8,7 @@ import java.util.*;
 public class LibraryBook {
 	private static final double DEFAULT_OVERDUE_DAILY_COST = 0.5;// 默认每天逾期费用
 	private static final double DEFAULT_MAX_COST = 50.0; // 默认最高费用
-	private static final String DEFAULT_TITLE = "Title unknow"; // 默认标题
+	private static final String DEFAULT_TITLE = "Clannad"; // 默认标题
 
 	// GregorianCalendar是一个计算函数，
 	// 是 Calendar 的一个具体子类，
