@@ -2,7 +2,8 @@ package chapter05;
 /*
  * 同步方法
  */
-
+//利用同步synchronized方法和同步锁可以得到相同的效果
+//但相对而言，同步方法 封装性更好，也更容易维护
 class Ticket6 implements Runnable{
 	private int tickets = 100 ;
 	public void run() {
@@ -14,7 +15,7 @@ class Ticket6 implements Runnable{
 		}
 	}
 	
-	private synchronized void saleTicket() {
+	private synchronized void saleTicket() {//同步方法
 		if (tickets > 0) {
 			
 			try {
@@ -23,9 +24,8 @@ class Ticket6 implements Runnable{
 				// TODO: handle exception
 				e.printStackTrace();
 			}
-			
 			System.out.println(Thread.currentThread().getName() + "---卖出票" + tickets--);
-			
+	
 		}
 	}
 }

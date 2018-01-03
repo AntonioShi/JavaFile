@@ -8,23 +8,24 @@ package chapter05;
 
 class Ticket implements Runnable{
 	private int tickets = 100 ;
-	Object lock = new Object() ;//定义任意一个对象，作用同步代码块的锁
+	Object lock = new Object() ;//定义Object 锁对象，作用同步代码块的锁
 	
 	public void run() {
 		while (true) {
 			synchronized (lock) {//定义同步代码块
 			
-				try {
-					Thread.sleep(100);//
-				} catch (Exception e) {
-					// TODO: handle exception
-					e.printStackTrace();
-				}
-				
 				if (tickets > 0) {
 					Thread thread = Thread.currentThread() ;
 					String th_name = thread.getName() ;
-					System.out.println(th_name + "------卖出票" + tickets--);//由于cpu的原因，运行时可能只会出现001号售票员
+					
+					try {
+						System.out.println(th_name + "------卖出票" + tickets--);//由于cpu的原因，运行时可能只会出现001号售票员
+						Thread.sleep(0);
+					} catch (Exception e) {
+						// TODO: handle exception
+						e.printStackTrace();
+					}
+					
 				}else {
 					break ;//完成任务后跳出
 				}

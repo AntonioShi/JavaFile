@@ -19,7 +19,7 @@ public class Example3 {
 	}
 
 	class TicketWindow implements Runnable{
-		private int tickets = 100;
+		private int tickets = 1000;
 		public void run() {
 			while(true) {
 				if (tickets > 0) {
@@ -33,7 +33,7 @@ public class Example3 {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					}
+				}
 			}
 		}
 	}

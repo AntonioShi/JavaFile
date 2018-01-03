@@ -3,18 +3,19 @@ package chapter05;
  * 线程让步
  */
 
-class YieldThread extends Thread{
+class YieldThread extends Thread{//让步线程
 
 	public YieldThread(String name) {
 		super(name);
 		// TODO Auto-generated constructor stub
 	}
+	
 	public void run() {
-		for (int i = 0; i < 5; i++) {
-			System.out.println(Thread.currentThread().getName() + "---" + i);
-			if (i== 3) {
-				System.out.print("线程让步");
-				Thread.yield();//线程运行到此，作出让步
+		for (int i = 5; i >= 0; i--) {
+			System.out.println(Thread.currentThread().getName() + "倒计时：   " + i);
+			if (i == 3 || i == 2) {
+				System.out.println("线程让步");
+				Thread.yield();//线程运行到此，作出让步,进入 阻塞状态
 				
 				
 				try {//由于处理器速度太快，素以需要休眠函数去辅助，才能让让步效果比较明显
