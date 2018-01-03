@@ -20,7 +20,7 @@ class Ticket implements Runnable{
 					
 					try {
 						System.out.println(th_name + "------卖出票" + tickets--);//由于cpu的原因，运行时可能只会出现001号售票员
-						Thread.sleep(0);
+						Thread.sleep(10);
 					} catch (Exception e) {
 						// TODO: handle exception
 						e.printStackTrace();
