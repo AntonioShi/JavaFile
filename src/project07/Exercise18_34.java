@@ -369,9 +369,6 @@ public class Exercise18_34 extends JApplet {//继承面板类
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //用户单击窗口的关闭按钮时程序执行的操作
     frame.setLocationRelativeTo(null);//在屏幕中出现的位置，定位
     frame.setVisible(true);//设置窗体可见，必须要有，true
-    
 
-    
-    
   }
 }

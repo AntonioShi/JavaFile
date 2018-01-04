@@ -16,7 +16,6 @@ public class Example2 {
 
 interface Shape{
 	double area(double x) ;
-	
 }
 
 class Square implements Shape{
@@ -27,7 +26,7 @@ class Square implements Shape{
 }
 
 class Circle implements Shape{
-	
+//	实现shape接口的功能
 	public double area(double x) {
 		return (3.14*x*x) ;
 	}

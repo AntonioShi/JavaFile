@@ -1,29 +1,30 @@
 package chapter04;
 
-
+/*
+ * Clannad 
+ */
 public class Example1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Student student = new Student("石云成", 20);
+		Students student = new Students("石云成", 20);
 		student.show();
 		
-		Student under = new Undergraduate("秋生", 21, "演员") ;
+		Students under = new Undergraduate("秋生", 21, "演员") ;
 		under.show();
-//		student.show();
 	}
 
 }
 
-class Student{
+class Students{
 	String name ;
 	int age ;
-	public Student() {
+	public Students() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Student(String name, int age) {
+	public Students(String name, int age) {
 		super();
 		this.name = name;
 		this.age = age;
@@ -34,7 +35,7 @@ class Student{
 	}
 }
 
-class Undergraduate extends Student{
+class Undergraduate extends Students{
 	String degree ;
 
 	public Undergraduate() {

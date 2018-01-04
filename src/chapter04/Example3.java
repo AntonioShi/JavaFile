@@ -1,5 +1,7 @@
 package chapter04;
-
+/*
+ * 测试胡定义异常类能否正常使用
+ */
 
 public class Example3 {
 
@@ -8,7 +10,7 @@ public class Example3 {
 		Player player = new Player() ;
 		try {
 			player.play(16);
-		} catch (Exception e) {
+		} catch (NoThisSongException e) {//利用play去测试我们写的NoThisSongException异常类是否能够正常工作
 			// TODO: handle exception
 			System.out.println("捕获的异常信息为: "+e.getMessage());
 		}
@@ -18,6 +20,11 @@ public class Example3 {
 
 
 class NoThisSongException extends Exception{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	public NoThisSongException() {
 		super();
@@ -31,7 +38,6 @@ class NoThisSongException extends Exception{
 
 	
 }
-
 
 class Player{
 	

@@ -96,13 +96,14 @@ class Pattern {
 		}
 	}
 }
-
+//1561
 public class WordText {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		WordConcordance wc = new WordConcordance();
 		wc.run();
+		System.out.println("完成,请打开文件验证");
 	}
 
 }

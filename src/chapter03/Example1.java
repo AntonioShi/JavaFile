@@ -1,5 +1,7 @@
 package chapter03;
-
+/*
+ * 这个是什嘛呀:内部类的创建和使用
+ */
 public class Example1 {
 
 	public static void main(String[] args) {
@@ -10,7 +12,7 @@ public class Example1 {
 	}
 
 }
-
+//内部类
 class Father {
 	private String name = "zhangjun";
 
