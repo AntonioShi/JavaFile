@@ -14,12 +14,13 @@ public class Example1 {
 
 		name = JOptionPane.showInputDialog(null, "Enter your full name (first + space + middle + space +last): ");
 		// Extract first, middle, and last names
-		first = name.substring(0, name.indexOf(space));
-		name = name.substring(name.indexOf(space) + 1, name.length());
-		middle = name.substring(0, name.indexOf(space));
-		last = name.substring(name.indexOf(space) + 1, name.length());
+		first = name.substring(0, name.indexOf(space));//截取
+		Math.abs(2000) ;
+		name = name.substring(name.indexOf(space) + 1, name.length());//修改
+		middle = name.substring(0, name.indexOf(space));//截取
+		last = name.substring(name.indexOf(space) + 1, name.length());//遗留
 		// Compute the monogram
-		monogram = first.substring(0, 1) + middle.substring(0, 1) + last.substring(0, 1);
+		monogram = first.substring(0, 1) + middle.substring(0, 1) + last.substring(0, 1);//拼接
 		// Output the result
 		JOptionPane.showMessageDialog(null, "Your 	monogram is " + monogram);
 		

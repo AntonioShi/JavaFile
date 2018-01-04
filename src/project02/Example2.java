@@ -4,15 +4,13 @@ import java.lang.*;
 import java.util.*;
 /*
  * MyIntefer class
+ * 期中考试手写题
  */
 
 class MyInteger{
-	static int value ;
-	
-	
+	int value ;
 	
 	public MyInteger(int value) {
-		super();
 		this.value = value;
 	}
 
@@ -21,17 +19,17 @@ class MyInteger{
 	}
 
 	
-	static public boolean isEven() {//如果是偶数
+	public boolean isEven() {//如果是偶数
 			
-			return value % 2 == 0;
+			return (value % 2 == 0);
 		}
 		
-	static public boolean isOdd() {//如果奇数
+	public boolean isOdd() {//如果奇数
 			
-			return value % 2 == 0 ;
+			return (value % 2 == 0) ;
 		}
 		
-	static	public boolean isPrime() {//如果素数
+	public boolean isPrime() {//如果素数
 		  for (int i = 2; i < value-1; i++) {
 			  if (value % i == 0 && i != value) {
 				  	return true ;
@@ -41,17 +39,17 @@ class MyInteger{
 			return false ;
 		}
 		
-	static public boolean isEven(int value) {//如果是偶数
+	public boolean isEven(int value) {//如果是偶数
 			
 			return value % 2 == 0;
 		}
 		
-	static public boolean isOdd(int value) {//如果奇数
+	public boolean isOdd(int value) {//如果奇数
 			
 			return value % 2 == 0 ;
 		}
 		
-	static	public boolean isPrime(int value) {//如果素数
+	public boolean isPrime(int value) {//如果素数
 		  for (int i = 2; i < value-1; i++) {
 			  if (value % i == 0 && i != value) {
 				  	return true ;
@@ -62,17 +60,17 @@ class MyInteger{
 		}
 	
 	
-	static public boolean isEven(MyInteger a) {//如果是偶数
+	public boolean isEven(MyInteger a) {//如果是偶数
 	
 		return isEven(a.value) ;
 	}
 	
-	static public boolean isOdd(MyInteger a) {//如果奇数
+	public boolean isOdd(MyInteger a) {//如果奇数
 	
 		return isOdd(a.value) ;
 	}
 	
-	static	public boolean isPrime(MyInteger a) {//如果素数
+	public boolean isPrime(MyInteger a) {//如果素数
 	  for (int i = 2; i < a.value-1; i++) {
 		  if (a.value % i == 0 && i != value) {
 			  	return true ;
@@ -82,7 +80,7 @@ class MyInteger{
 		return false ;
 	}
 	
-	static boolean equals(int obj) {
+	boolean equals(int obj) {
 		// TODO Auto-generated method stub
 		if (value == obj) {
 			return true ;
@@ -90,21 +88,19 @@ class MyInteger{
 		return false ;
 	}
 	
-	static boolean equals(MyInteger obj) {
+	boolean equals(MyInteger obj) {
 		if (obj.getInt() == value) {
 			return true ;
 		}
 		return false ;
 	}
 	
-	static int[] parseInt(char a[]) throws Exception{
-		int []num = new int [a.length];
+	int[] parseInt(char a[]) throws Exception{
+		int []num = new int [a.length];//char[] -- > int
 		try {
-			
-					for (int i = 0; i < a.length; i++) {
-					num[i] = a[i] - '0' ;//直接相减， 通过内部转换成integer
-				}
-					
+				for (int i = 0; i < a.length; i++) {
+				num[i] = a[i] - '0' ;//直接相减， 通过内部转换成integer
+			}
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -112,8 +108,8 @@ class MyInteger{
 		return num ;
 	}
 	
-	static int[] parseInt(String a) throws Exception{
-		int []num = new int [a.length()];
+	 int[] parseInt(String a) throws Exception{
+		int []num = new int [a.length()];//string -- > int
 		char []ch ;
 		try {
 			ch = a.toCharArray() ;
@@ -123,64 +119,73 @@ class MyInteger{
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-	
 		return num ;
 	}
 
 }
 
-public class Example2 {//测试搜有的方法```
+public class Example2 {//测试所有的方法
 
 	public static void main(String[] args) throws Exception {
 		// TODO Auto-generated method stub
 		int value = 66 ;
-		MyInteger myInteger = new MyInteger(value);
-		MyInteger obj = new MyInteger(88);
+		MyInteger myint = new MyInteger(77);
+		MyInteger myInt = new MyInteger(88);
 		
-		if (myInteger.isEven()) {//66
-			System.out.println("Even");
+		if (myint.isEven()) {//77
+			System.out.println(myint.getInt() + "is Even");
 		}
-		else if (myInteger.isOdd()) {
-			System.out.println("Odd");
-		}
-		if (myInteger.isPrime()) {
-			System.out.println("Prime");
+		else if (myint.isOdd()) {
+			System.out.println(myint.getInt() + " is odd");
 		}
 		
-		if (myInteger.isEven(value)) {//66
-			System.out.println("Even(value)");
-		}
-		if (myInteger.isOdd(value)) {
-			System.out.println("Odd(value)");
-		}
-		if (myInteger.isPrime(value)) {
-			System.out.println("Prime(value)");
-		}
-		if (myInteger.isEven(obj)) {
-			System.out.println("Even(obj)");
-		}
-		if (myInteger.isOdd(obj)) {
-			System.out.println("Odd(obj)");
-		}
-		if (myInteger.isPrime(obj)) {
-			System.out.println("Prime(obj)");
+		if (myint.isPrime()) {
+			System.out.println(myint.getInt() + "Prime");
 		}
 		
-		if (myInteger.equals(88)) {//99
-			System.out.println("equal Int");
+		if (myint.isEven(value)) {//66
+			System.out.println(value + "is Even");
 		}
-		if (myInteger.equals(obj)) {//88
-			System.out.println("equal MyInteger");
+		else if (myint.isOdd(value)) {
+			System.out.println(value + "is Odd");
 		}
 		
-		char []a = {'9', '8', '7'} ;
+		if (myint.isPrime(value)) {
+			System.out.println(value + "is Prime");
+		}
+		
+		if (myint.isEven(myInt)) {
+			System.out.println(myInt.getInt() + "is Even(obj)");
+		}
+		else if (myint.isOdd(myInt)) {
+			System.out.println(myInt.getInt() + "is Odd(obj)");
+		}
+		if (myint.isPrime(myInt)) {
+			System.out.println(myInt.getInt() + "is Prime(obj)");
+		}
+		
+		if (myint.equals(99)) {//99
+			System.out.println(88 + "is equal with" + myint.getInt());
+		}
+		if (myint.equals(myInt)) {//88
+			System.out.println(myInt.getInt() + "is equal with" + myint.getInt());
+		}
+		System.out.println("接下来的是类型转换");
+		char []a = {'x', 'y', 'z'} ;
+		String str = String.valueOf(a) ;//你要记住!!!
 		int []num = new int [a.length];
-		num = obj.parseInt(a) ;
-		System.out.println(num);//987
+		num = myInt.parseInt(a) ;
+		System.out.println(str);
+		for (int i = 0; i < num.length; i++) {
+			System.out.print(num[i]);//987
+		}
 		
+		System.out.println();
 		String bString = "9527" ;
-		num = obj.parseInt(bString) ;
-		System.out.println(num);//9527
+		num = myInt.parseInt(bString) ;
+		for (int i = 0; i < num.length; i++) {
+			System.out.print(num[i]);//987
+		}
 	}
 
 }

@@ -1,7 +1,9 @@
 package project02;
 import java.util.Scanner;
 import java.math.*;
+//等额本金计算公式：每月还款金额 = （贷款本金 ÷ 还款月数）+（本金 — 已归还本金累计额）×每月利率
 
+//等额本息计算公式：〔贷款本金×月利率×（1＋月利率）＾还款月数〕÷〔（1＋月利率）＾还款月数－1〕
 /*
  * Problem statement:
 	* Write a loan calculator program that 
@@ -133,7 +135,7 @@ public class Example3 {
 
 //等额本金计算公式：每月还款金额 = （贷款本金 ÷ 还款月数）+（本金 — 已归还本金累计额）×每月利率
 
-
+//等额本息计算公式：〔贷款本金×月利率×（1＋月利率）＾还款月数〕÷〔（1＋月利率）＾还款月数－1〕
 
 
 
